@@ -20,19 +20,23 @@ Command used: ```coverage run -m pytest```
 
 ## Coverage improvement
 
-### Individual tests
+## Individual tests
 
-```remove_cookie_by_name()```
+### First function: ```remove_cookie_by_name()```
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced tests for function 1>
+[Commit link](https://github.com/psf/requests/commit/8e327ef5cd0ab2334f079b03dd3702a26820704f)
+
+#### Function in ```coverage html``` before
 
 ![image](https://github.com/MihneaCiocioiu/requests/assets/45711313/6c31bf7a-4aef-4910-9549-b48b64da5fe1)
 
-<Provide a screenshot of the new coverage results for such function>
+### Function in ```coverage html``` after
 
-<State the coverage improvement with a number and elaborate on why the coverage is improved>
+![image](https://github.com/MihneaCiocioiu/requests/assets/45711313/d187149e-378e-4952-990f-c9daa1cc35cd)
 
-```_find```
+Before, when running the full coverage function, we are now getting ```596 passed```, in contrast with the ```590 passed``` from before, which shows an improvement with the added coveerage for our function.
+
+```_find()```
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced tests for function 1>
 
