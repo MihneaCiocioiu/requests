@@ -16,23 +16,32 @@ Tool used: Coverage.py
 
 Command used: ```coverage run -m pytest```
 
-<Show the coverage results provided by the existing tool with a screenshot>
+![image](https://github.com/MihneaCiocioiu/requests/assets/45711313/e0b2bf06-7558-4691-b7a3-d796d92681ec)
 
 ## Coverage improvement
 
 ### Individual tests
 
-<The following is supposed to be repeated for each function (2 in total)>
-
-<Function 1>
+```remove_cookie_by_name()```
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced tests for function 1>
 
-<Provide a screenshot of the old coverage results for such function>
+![image](https://github.com/MihneaCiocioiu/requests/assets/45711313/6c31bf7a-4aef-4910-9549-b48b64da5fe1)
 
 <Provide a screenshot of the new coverage results for such function>
 
 <State the coverage improvement with a number and elaborate on why the coverage is improved>
+
+```_find```
+
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced tests for function 1>
+
+![image](https://github.com/MihneaCiocioiu/requests/assets/45711313/0b841ef4-e17d-4e19-8182-6449cf5b2c74)
+
+<Provide a screenshot of the new coverage results for such function>
+
+<State the coverage improvement with a number and elaborate on why the coverage is improved>
+
 
 ### Overall
 
