@@ -104,3 +104,45 @@ def test_remove_cookie_by_name_path_mismatch():
 
     # Verify no cookie is removed
     assert len(cookiejar) == 2
+
+def test_find_cookie_by_name():
+    # Create a cookie jar and add some cookies
+    cookiejar = RequestsCookieJar()
+    cookiejar.set_cookie(create_cookie(name='cookie1', value='value1', domain='example.com', path='/'))
+
+    # Verify the cookie can be found by name
+    assert cookiejar._find('cookie1') == 'value1'
+
+def test_find_cookie_by_name_and_domain():
+    # Create a cookie jar and add some cookies
+    cookiejar = RequestsCookieJar()
+    cookiejar.set_cookie(create_cookie(name='cookie1', value='value1', domain='example.com', path='/'))
+    cookiejar.set_cookie(create_cookie(name='cookie2', value='value2', domain='another.com', path='/'))
+
+    # Verify the cookie can be found by name and domain
+    assert cookiejar._find('cookie2', domain='another.com') == 'value2'
+
+def test_find_cookie_by_name_domain_and_path():
+    # Create a cookie jar and add some cookies with different paths
+    cookiejar = RequestsCookieJar()
+    cookiejar.set_cookie(create_cookie(name='cookie1', value='value1', domain='example.com', path='/path1'))
+    cookiejar.set_cookie(create_cookie(name='cookie1', value='value2', domain='example.com', path='/path2'))
+
+    # Verify the cookie can be found by name, domain, and path
+    assert cookiejar._find('cookie1', domain='example.com', path='/path2') == 'value2'
+
+def test_find_cookie_not_found():
+    # Create a cookie jar and add a cookie
+    cookiejar = RequestsCookieJar()
+    cookiejar.set_cookie(create_cookie(name='cookie1', value='value1', domain='example.com', path='/'))
+
+    # Verify that KeyError is raised when the cookie is not found
+    with pytest.raises(KeyError):
+        cookiejar._find('non_existent_cookie')
+
+    with pytest.raises(KeyError):
+        cookiejar._find('cookie1', domain='nonexistent.com')
+
+    with pytest.raises(KeyError):
+        cookiejar._find('cookie1', domain='example.com', path='/nonexistent')
+
