@@ -1,78 +1,42 @@
-# Requests
+# Report for Assignment 1 resit
 
-**Requests** is a simple, yet elegant, HTTP library.
+## Project chosen: requests
 
-```python
->>> import requests
->>> r = requests.get('https://httpbin.org/basic-auth/user/pass', auth=('user', 'pass'))
->>> r.status_code
-200
->>> r.headers['content-type']
-'application/json; charset=utf8'
->>> r.encoding
-'utf-8'
->>> r.text
-'{"authenticated": true, ...'
->>> r.json()
-{'authenticated': True, ...}
-```
+Name: Mihnea Ciocioiu
 
-Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your `PUT` & `POST` data — but nowadays, just use the `json` method!
+URL: https://github.com/MihneaCiocioiu/requests
 
-Requests is one of the most downloaded Python packages today, pulling in around `30M downloads / week`— according to GitHub, Requests is currently [depended upon](https://github.com/psf/requests/network/dependents?package_id=UGFja2FnZS01NzA4OTExNg%3D%3D) by `1,000,000+` repositories. You may certainly put your trust in this code.
+Number of lines of code and the tool used to count it: 8188, lizard.py
 
-[![Downloads](https://static.pepy.tech/badge/requests/month)](https://pepy.tech/project/requests)
-[![Supported Versions](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/requests)
-[![Contributors](https://img.shields.io/github/contributors/psf/requests.svg)](https://github.com/psf/requests/graphs/contributors)
+Programming language: Python
 
-## Installing Requests and Supported Versions
+## Coverage measurement with existing tool
 
-Requests is available on PyPI:
+Tool used: Coverage.py
 
-```console
-$ python -m pip install requests
-```
+Command used: ```coverage run -m pytest```
 
-Requests officially supports Python 3.8+.
+<Show the coverage results provided by the existing tool with a screenshot>
 
-## Supported Features & Best–Practices
+## Coverage improvement
 
-Requests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today.
+### Individual tests
 
-- Keep-Alive & Connection Pooling
-- International Domains and URLs
-- Sessions with Cookie Persistence
-- Browser-style TLS/SSL Verification
-- Basic & Digest Authentication
-- Familiar `dict`–like Cookies
-- Automatic Content Decompression and Decoding
-- Multi-part File Uploads
-- SOCKS Proxy Support
-- Connection Timeouts
-- Streaming Downloads
-- Automatic honoring of `.netrc`
-- Chunked HTTP Requests
+<The following is supposed to be repeated for each function (2 in total)>
 
-## API Reference and User Guide available on [Read the Docs](https://requests.readthedocs.io)
+<Function 1>
 
-[![Read the Docs](https://raw.githubusercontent.com/psf/requests/main/ext/ss.png)](https://requests.readthedocs.io)
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced tests for function 1>
 
-## Cloning the repository
+<Provide a screenshot of the old coverage results for such function>
 
-When cloning the Requests repository, you may need to add the `-c
-fetch.fsck.badTimezone=ignore` flag to avoid an error about a bad commit (see
-[this issue](https://github.com/psf/requests/issues/2690) for more background):
+<Provide a screenshot of the new coverage results for such function>
 
-```shell
-git clone -c fetch.fsck.badTimezone=ignore https://github.com/psf/requests.git
-```
+<State the coverage improvement with a number and elaborate on why the coverage is improved>
 
-You can also apply this setting to your global Git config:
+### Overall
 
-```shell
-git config --global fetch.fsck.badTimezone ignore
-```
+<Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed at the beginning of the report)>
 
----
+<Provide a screenshot of the new coverage results by running the existing tool using all test modifications>
 
-[![Kenneth Reitz](https://raw.githubusercontent.com/psf/requests/main/ext/kr.png)](https://kennethreitz.org) [![Python Software Foundation](https://raw.githubusercontent.com/psf/requests/main/ext/psf.png)](https://www.python.org/psf)
