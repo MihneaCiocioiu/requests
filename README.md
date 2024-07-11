@@ -36,11 +36,17 @@ Command used: ```coverage run -m pytest```
 
 Before, when running the full coverage function, we are now getting ```596 passed```, in contrast with the ```590 passed``` from before, which shows an improvement with the added coveerage for our function.
 
-```_find()```
+### Seconf function: ```_find()```
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced tests for function 1>
+[Commit link](https://github.com/psf/requests/commit/b643a9e9c8abea8630f54c82e5776eec14f5c2a8)
+
+#### Function in ```coverage html``` before
 
 ![image](https://github.com/MihneaCiocioiu/requests/assets/45711313/0b841ef4-e17d-4e19-8182-6449cf5b2c74)
+
+#### Function in ```coverage html``` after
+
+![image](https://github.com/MihneaCiocioiu/requests/assets/45711313/8e014f04-a895-4f0c-b7c3-585deaf498b0)
 
 <Provide a screenshot of the new coverage results for such function>
 
@@ -49,7 +55,10 @@ Before, when running the full coverage function, we are now getting ```596 passe
 
 ### Overall
 
-<Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed at the beginning of the report)>
+#### Old Coverage results
 
-<Provide a screenshot of the new coverage results by running the existing tool using all test modifications>
+![image](https://github.com/MihneaCiocioiu/requests/assets/45711313/e0b2bf06-7558-4691-b7a3-d796d92681ec)
 
+#### New Coverage results
+
+![image](https://github.com/MihneaCiocioiu/requests/assets/45711313/7bb4bbe7-75a6-4056-b766-2efa5c1cfe83)
